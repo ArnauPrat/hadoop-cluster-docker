@@ -11,6 +11,12 @@ sudo docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
+                -p 9000:9000 \
+                -p 8030:8030 \
+                -p 8031:8031 \
+                -p 8032:8032 \
+                -p 8033:8033 \
+                -p 10020:10020 \
                 --name hadoop-master \
                 --hostname hadoop-master \
                 kiwenlau/hadoop:1.0 &> /dev/null
@@ -24,6 +30,7 @@ do
 	echo "start hadoop-slave$i container..."
 	sudo docker run -itd \
 	                --net=hadoop \
+                  -p 8042:8042 \
 	                --name hadoop-slave$i \
 	                --hostname hadoop-slave$i \
 	                kiwenlau/hadoop:1.0 &> /dev/null
