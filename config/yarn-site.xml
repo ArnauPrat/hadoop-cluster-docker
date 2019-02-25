@@ -12,4 +12,20 @@
         <name>yarn.resourcemanager.hostname</name>
         <value>hadoop-master</value>
     </property>
-</configuration>
+    <property>
+      <name>yarn.nodemanager.resource.memory-mb</name>
+      <value>1280000</value>
+    </property>
+    <property>
+      <name>yarn.scheduler.minimum-allocation-mb</name>
+      <value>2048</value>
+    </property>
+    <property>
+      <name>yarn.scheduler.maximum-allocation-mb</name>
+      <value>2048</value>
+    </property>
+    <property>
+      <name>yarn.nodemanager.vmem-pmem-ratio</name>
+      <value>2.1</value>
+    </property>
+  </configuration>
